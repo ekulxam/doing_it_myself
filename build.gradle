@@ -4,11 +4,26 @@ plugins {
 }
 
 repositories {
-	// Add repositories to retrieve artifacts from in here.
-	// You should only use this when depending on other mods because
-	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
-	// for more information about repositories.
+    maven {
+        name = "TerraformersMC"
+        url = "https://maven.terraformersmc.com/"
+    }
+    maven {
+        name = "Greenhouse Maven (Releases)"
+        url = "https://maven.greenhouse.lgbt/releases"
+    }
+    maven {
+        name = "Greenhouse Maven (Snapshots)"
+        url = "https://maven.greenhouse.lgbt/snapshots"
+    }
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+    }
+    maven {
+        name = "Cassian's Maven"
+        url = "https://maven.cassian.cc"
+    }
 }
 
 dependencies {
@@ -19,6 +34,9 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
+    localRuntime "com.terraformersmc:modmenu:18.0.0"
+
+    implementation "lgbt.greenhouse.panacea:panacea:0.1.5+26.1.x"
     implementation project(":tourmaline")
 }
 
