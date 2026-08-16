@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "doing_it_myself",
+	"version": "${version}",
+	"name": "Doing It Myself",
+	"description": "Patching Mod Garden: DIY",
+	"authors": [
+		"Survivalblock"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/doing_it_myself/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"survivalblock.atmosphere.doing_it_myself.DoingItMyself"
+		]
+	},
+	"mixins": [
+		"doing_it_myself.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
